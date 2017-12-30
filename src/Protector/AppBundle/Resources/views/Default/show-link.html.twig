@@ -1,0 +1,49 @@
+{% extends "@ProtectorApp/layout.html.twig" %}
+{% block title %}
+    Mes liens protégés
+{% endblock %}
+{% block content %}
+    <section id="inner-description" class="section inner-description">
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                {% if not app.request.cookies.has('recaptcha') %}
+                <div class="col-md-6 col-md-offset-3">
+                    {% for key,msgs in app.session.flashbag.all() %}
+                        {% for msg in msgs %}
+                            <div class="alert alert-{{ key }}">
+                                {{ msg }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    <div class="alert alert-info alert-info-captcha">
+                        <i class="fa fa-info-circle"></i> Merci de valider le "Captcha" pour consulter les liens.
+                        (Cela ne vous sera plus demandé qu'après 4 heures)
+                    </div>
+                    <form method="post">
+                        <div class="g-recaptcha text-center" data-sitekey="6LckRzQUAAAAAEalGSZ4WVyWpMBjGee_BQ_CB2UC"></div>
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-block" id="checkRecaptcha">
+                                Valider
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                {% else %}
+                    <div class="show-link">
+                        <ul class="links">
+                            {% for link in generatedLink.links %}
+                                <li><a href="{{ link }}" target="_blank">{{ link }} <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts_body %}
+    {{ parent() }}
+    <script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>
+{% endblock %}

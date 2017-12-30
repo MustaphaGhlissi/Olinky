@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Page Introuvable !{% endblock %}
+{% block body %}
+    <section class="banner" role="banner">
+        <!-- banner text -->
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-text text-center" >
+                    <h1>Ouuuuuuups ! </h1>
+                    <h1>{{ status_text~" "~status_code }}</h1>
+                    <p>
+                        La page que vous cherchez est introuvable !
+                        <a href="{{ path('recaptcha_home') }}">Retour à la page d'accueil</a>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

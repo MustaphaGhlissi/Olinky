@@ -1,0 +1,603 @@
+/* ------------------------------------------------------------------------------
+	Template Name: Minifolio
+	Author: Designstub
+	Author URI: http://www.designstub.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto%20Slab:300,400,500,600,700);
+
+p {
+	font-size: 14px;
+	line-height: 22.4px;
+	color: #6c7279;
+}
+h1 {
+	font-size: 65px;
+	color: #2d3033;
+}
+h2 {
+	font-size: 40px;
+	color: #2d3033;
+}
+h3 {
+	font-size: 28px;
+	color: #2d3033;
+	font-weight: 300;
+}
+h4 {
+	font-size: 22px;
+	color: #2d3033;
+	font-weight: 400;
+}
+h5 {
+	font-size: 14px;
+	color: #2d3033;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.btn {
+	background-color: #3bc492;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 5px;
+	border: 0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+#btnCopy
+{
+	background-color: lightgray;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+.btn:hover, .btn:focus {
+	background-color: #3d3d3d;
+	color: #fff;
+}
+.btn-large {
+	padding: 15px 40px;
+}
+/* ------------------------------------------------------------------------------
+	Global Styles
+-------------------------------------------------------------------------------*/
+a {
+	color: #e84545;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	-moz-transition: background-color, color, 0.3s;
+	-o-transition: background-color, color, 0.3s;
+	-webkit-transition: background-color, color, 0.3s;
+	transition: background-color, color, 0.3s;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	color: #6c7279;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style: none;
+}
+.section {
+	padding: 100px 0;
+}
+.no-padding {
+	padding: 0;
+}
+.no-gutter [class*=col-] {
+	padding-right: 0;
+	padding-left: 0;
+}
+.space
+{
+	margin-top:60px;	
+}
+/* ------------------------------------------------------------------------------
+	Header
+-------------------------------------------------------------------------------*/
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#header .header-content {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 60px 0;
+	width: 100%;
+	-moz-transition: padding 0.3s;
+	-o-transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
+}
+#header .logo {
+	float: left;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+#header.fixed {
+	background-color: #0768de;
+}
+#header.fixed .header-content {
+	border-bottom: 0;
+	padding: 25px 0;
+}
+#header.fixed .nav-toggle {
+	top: 18px;
+}
+.navigation.open {
+	opacity: 0.9;
+	visibility: visible;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.navigation {
+	float: right;
+}
+.navigation li {
+	display: inline-block;
+}
+.navigation a {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 13px;
+	font-weight: 400;
+	margin-left: 40px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.navigation a:hover, .navigation a.active {
+	color: #fff;
+}
+.nav-toggle {
+	display: none;
+	height: 44px;
+	overflow: hidden;
+	position: fixed;
+	right: 5%;
+	text-indent: 100%;
+	top: 32px;
+	white-space: nowrap;
+	width: 44px;
+	z-index: 99999;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.nav-toggle:before, .nav-toggle:after {
+	border-radius: 50%;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+}
+.nav-toggle:before {
+	background-color: #4b1685;
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.nav-toggle:after {
+	background-color: #4b1685;
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-moz-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+.nav-toggle span {
+	background-color: #fff;
+	bottom: auto;
+	display: inline-block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	right: auto;
+	top: 50%;
+	width: 18px;
+	z-index: 10;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.nav-toggle span:before, .nav-toggle span:after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: -moz-transform 0.3s;
+	-o-transition: -o-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.nav-toggle span:before {
+	-moz-transform: translateY(-6px) rotate(0deg);
+	-ms-transform: translateY(-6px) rotate(0deg);
+	-webkit-transform: translateY(-6px) rotate(0deg);
+	transform: translateY(-6px) rotate(0deg);
+}
+.nav-toggle span:after {
+	-moz-transform: translateY(6px) rotate(0deg);
+	-ms-transform: translateY(6px) rotate(0deg);
+	-webkit-transform: translateY(6px) rotate(0deg);
+	transform: translateY(6px) rotate(0deg);
+}
+.nav-toggle.close-nav:before {
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+.nav-toggle.close-nav:after {
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.nav-toggle.close-nav span {
+	background-color: rgba(255, 255, 255, 0);
+}
+.nav-toggle.close-nav span:before, .nav-toggle.close-nav span:after {
+	background-color: #fff;
+}
+.nav-toggle.close-nav span:before {
+	-moz-transform: translateY(0) rotate(45deg);
+	-ms-transform: translateY(0) rotate(45deg);
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+.nav-toggle.close-nav span:after {
+	-moz-transform: translateY(0) rotate(-45deg);
+	-ms-transform: translateY(0) rotate(-45deg);
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
+/* ------------------------------------------------------------------------------
+	Banner
+-------------------------------------------------------------------------------*/
+
+.banner {
+	background-color: #0768de;
+	min-height: 750px;
+}
+
+.banner-text {
+	padding-top: 20%;
+}
+.banner-text h2 {
+	color: #fff;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+}
+.banner-text p {
+	color: #fff;
+	font-size: 19px;
+	font-weight: 400;
+	letter-spacing: 3px;
+	line-height: 24px;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+
+
+/* ------------------------------------------------------------------------------
+	Description Text
+-------------------------------------------------------------------------------*/
+
+.descripton p {
+	color: #3d3d3d;
+	font-size: 18px;
+	line-height: 33px;
+	font-weight: 400;
+}
+
+.animated {
+  visibility: visible; }
+  
+/* ------------------------------------------------------------------------------
+	Hire me
+-------------------------------------------------------------------------------*/
+.hireme {
+	background-color: #fafafa;
+}
+.hireme h3 {
+	font-family: "Roboto", sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	margin-top: 0;
+}
+.hireme p {
+	color: #2d3033;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+.hireme .btn {
+	margin-top: 30px;
+}
+/* ------------------------------------------------------------------------------
+	Footer
+-------------------------------------------------------------------------------*/
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin: 0 0 250px;
+}
+
+.footer {
+	padding: 50px 0px 20px 0px;
+	text-align: center;
+	background-color: #0768de;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer p {
+	font-family: "Roboto", sans-serif;
+	font-size: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.footer a
+{
+	color: #000;
+	font-weight: bold;
+}
+.footer a.sponsor{
+	font-size: 18px;
+}
+
+.footer a:hover {
+	color: #f27c21;
+}
+
+.footer-item h4
+{
+	font-weight: bolder;
+	color: #fff;
+	border-bottom:2px solid #fff;
+	padding-bottom: 10px;
+}
+/* ------------------------------------------------------------------------------
+	Inner Page Banner
+-------------------------------------------------------------------------------*/
+
+.innerbanner {
+	background-color: #0768de;
+	min-height: 100%;
+}
+.innerbanner-text {
+	padding-top: 15%;
+	padding-bottom: 1%;
+}
+
+.innerbanner-text p {
+	color: #fff;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: 3px;
+	line-height: 24px;
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+/* ------------------------------------------------------------------------------
+	Inner description
+-------------------------------------------------------------------------------*/
+.inner-description h1 {
+	color: #3d3d3d;
+	font-size: 23px;
+	font-weight: 700;
+	margin-top:55px;
+}
+.inner-description p {
+	color: #3d3d3d;
+	font-size: 18px;
+	line-height: 33px;
+	font-weight: 400;
+}
+.inner-description img
+{
+width:150px;
+height:150px;
+border-radius:50%;	
+}
+
+
+/* ------------------------------------------------------------------------------
+	Contact form
+-------------------------------------------------------------------------------*/
+.conForm textarea {
+	background:#fafafa;
+	color:#797979;
+	padding:5px 10px;
+	margin-bottom:18px;
+	outline:none;
+	height:150px;
+	font-style:normal;
+	resize:none;
+	font-size:15px;
+	width: 100%;
+}
+
+.list-errors, .links
+{
+	padding:0;
+	margin: 0;
+	list-style: none;
+}
+
+.g-recaptcha>div
+{
+	width: 100% !important;
+	margin: 10px 0;
+}
+
+.g-recaptcha
+{
+	margin: 0 auto;
+}
+
+#checkRecaptcha
+{
+	width: 304px;
+	background-color: #0768de;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.list-errors .fa
+{
+	color: inherit !important;
+}
+
+.show-link
+{
+	border:10px solid #ddd;
+	padding: 30px;
+	background-color: #f1f1f1;
+	text-align: center;
+	border-radius: 10px;
+}
+.show-link .fa
+{
+	color: #0768de;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.new-link .fa,.show-link .fa
+{
+	color: #000;
+}
+
+.new-link
+{
+	position: relative;
+	font-size: 15px;
+}
+.new-link a,.show-link a
+{
+	color: #0768de;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.alert-info-captcha
+{
+	color: #000;
+	font-weight: bold;
+	padding: 40px;
+}
+
+.alert-info-captcha .fa{
+	color: #000;
+}
+
+.conForm .submitBnt {
+	background:#0768de;
+	color: #fff;
+	padding: 10px 40px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 5px;
+	border: 0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.conForm .submitBnt:hover {
+	background:#3d3d3d;
+	color:#fff;
+}
+.error_message {
+    color: #ff675f;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#success_page h3 {
+    color: #5ed07b;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.fa
+{
+	color: #0768de;
+}
+
+.info h2
+{
+	font-size:18px;
+}
+
+.info p
+{
+	font-size: 14px;
+}

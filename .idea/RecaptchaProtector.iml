@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/dotenv" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/flex" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/framework-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/web-server-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/yaml" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/cache" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/config" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/dotenv" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/flex" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/framework-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/web-server-bundle" />
+          <root url="file://$MODULE_DIR$/../../Oswa Projects/OswaGroup/vendor/symfony/yaml" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

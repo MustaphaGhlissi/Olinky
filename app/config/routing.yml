@@ -1,0 +1,6 @@
+protector_app:
+    resource: "@ProtectorAppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+

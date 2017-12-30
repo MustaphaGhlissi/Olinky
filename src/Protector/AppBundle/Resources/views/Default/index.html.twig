@@ -1,0 +1,77 @@
+{% extends "@ProtectorApp/layout.html.twig" %}
+
+{% block header %}
+    <section class="banner" role="banner">
+        <header id="header">
+            <!-- navigation section  -->
+            <div class="header-content clearfix">
+                <a class="logo" href="{{ path('recaptcha_home') }}">
+                    RecaptchaProtector
+                </a>
+                <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                        <li><a href="{{ path('add_link') }}">Protéger un lien</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+            <!-- navigation section  -->
+        </header>
+
+        <!-- banner text -->
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+
+                <div class="banner-text text-center" >
+                    <h2>Le générateur des liens protégé par ReCaptcha</h2>
+                    <p>Protéger et regrouper vos liens pour un partage facile et discret</p>
+                    <p>
+                        Protéger vos liens des regards indésirables (bots) en toute simplicité, On utilise reCAPTCHA de google avec un system innovant de creation d'urls dynamique.
+                    </p>
+                    <!-- banner text -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section id="descripton" class="section descripton">
+        <div class="container">
+            <div class="col-md-4 text-center">
+                <div class="info">
+                    <i class="fa fa-lock fa-4x" aria-hidden="true"></i>
+                    <h2>Liens protégés</h2>
+                    <p>
+                        RecaptchaProtector est un simple moyen gratuit pour cacher et protéger vos liens
+                        à fin de garantir leurs anonymats, prolonger considérablement leurs durées de vie
+                        et les garder à l’abri des regards indésirables.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="info">
+                    <i class="fa fa-cogs fa-4x" aria-hidden="true"></i>
+                    <h2>Fourni par google</h2>
+                    <p>
+                        RecaptchaProtector utilise le système anti-robots "reCAPTCHA" appartenant
+                        à Google qui sert à protéger les sites web contre le spam.
+                        <b>Dur pour les robots, faciles pour les humains</b>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="info">
+                    <i class="fa fa-users fa-4x" aria-hidden="true"></i>
+                    <h2>Facile à utiliser</h2>
+                    <p>
+                        Ne nécessite aucune inscription, gratuit (et il le restera).
+                        Et utilise le minimum possible de publicité pour ne pas gêner nos utilisateurs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- description text section -->
+
+{% endblock %}

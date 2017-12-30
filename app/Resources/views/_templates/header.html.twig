@@ -1,0 +1,29 @@
+<!-- header section -->
+<section class="innerbanner" role="banner">
+    <header id="header">
+        <div class="header-content clearfix"> <a class="logo" href="{{ path('recaptcha_home') }}">
+                RecaptchaProtector
+            </a>
+            <nav class="navigation" role="navigation">
+                <ul class="primary-nav">
+                    <li><a href="{{ path('add_link') }}">Protéger un lien</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    </header>
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="innerbanner-text text-center">
+                {% if app.request.get('_route') == "show_link" %}
+                    {% if app.request.cookies.has('recaptcha') %}
+                        <p>Vos liens protégés</p>
+                    {% else %}
+                        <p>Valider le recaptcha et consulter votre liens</p>
+                    {% endif %}
+                {% else %}
+                    <p>Ajouter votre liens à protéger</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

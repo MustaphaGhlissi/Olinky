@@ -1,0 +1,82 @@
+{% extends "@ProtectorApp/layout.html.twig" %}
+{% block title %}
+    Protéger votre liens
+{% endblock %}
+{% block content %}
+    <section id="inner-description" class="section inner-description">
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <!--contact form start-->
+                <div class="conForm">
+                    {% for msg in app.session.flashbag.get('msg') %}
+                        <div class="alert alert-success new-link">
+                            {{ msg|raw }}
+                            <button class="btn btn-default" id="btnCopy" data-toggle="tooltip" title="Copier">
+                                <i class="fa fa-copy fa-2x"></i>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    {% if errors is defined %}
+                        <div class="alert alert-danger">
+                            <ul class="list-errors">
+                                {% for key,value in errors %}
+                                    <li>
+                                        <i class="fa fa-remove"></i> {{ key~" : "~value }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                    {{ form_start(formLink) }}
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            {{ form_label(formLink.links) }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+
+                        <div class="form-group">
+                            {{ form_widget(formLink.links) }}
+                            {% if not formLink.links.vars.valid %}
+                                <span class="text-danger">
+                                {{ form_errors(formLink.links) }}
+                                </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 form-group text-right">
+                        {{ form_widget(formLink.submit,{'attr':{'class':'submitBnt'}}) }}
+                    </div>
+                    {{ form_rest(formLink) }}
+                    {{ form_end(formLink) }}
+                </div>
+                <!--contact form end-->
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts_body %}
+    {{ parent() }}
+
+    <script>
+
+        $(document).ready(function () {
+            $('#btnCopy').click(function () {
+                copyToClipboard($('#generatedLink'));
+                $(this).attr('title', 'Lien copié!').tooltip('fixTitle').tooltip('show');
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+{% endblock %}
